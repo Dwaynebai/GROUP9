@@ -35,7 +35,7 @@ const storage = multer.diskStorage({
 
   // Get company settings
 app.get('/api/settings', (req, res) => {
-  db.query('SELECT * FROM company_settings WHERE id = 0', (err, result) => {
+  db.query('SELECT * FROM company_settings WHERE id = 1', (err, result) => {
     if (err) throw err;
     res.send(result[0]);
   });
